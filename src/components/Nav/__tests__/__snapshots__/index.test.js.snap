@@ -2,22 +2,23 @@
 
 exports[`Nav component matches snapshot DOM node structure 1`] = `
 <DocumentFragment>
-  <header>
+  <header
+    class="flex-row px-1"
+  >
     <h2>
       <a
+        data-testid="link"
         href="/"
       >
         <span
-          arialabel="camera"
+          aria-label="camera"
           role="img"
         >
-           📸 
+           📸
         </span>
-         Oh Snap! 
+         Oh Snap!
       </a>
-       
     </h2>
-     
     <nav>
       <ul
         class="flex-row"
@@ -26,57 +27,28 @@ exports[`Nav component matches snapshot DOM node structure 1`] = `
           class="mx-2"
         >
           <a
+            data-testid="about"
             href="#about"
           >
-            About me 
+            About me
           </a>
-           
-        </li>
-         
-        <li>
-          <span>
-             Contact 
-          </span>
-           
-        </li>
-         
-        <li
-          class="mx-1"
-        >
-          <span>
-             commercial 
-          </span>
-           
         </li>
         <li
-          class="mx-1"
+          class="mx-2"
         >
           <span>
-             portraits 
+            Contact
           </span>
-           
         </li>
         <li
-          class="mx-1"
+          class="mx-1 false"
         >
           <span>
-             food 
+            Portraits
           </span>
-           
         </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-             landscape 
-          </span>
-           
-        </li>
-         
       </ul>
-       
     </nav>
-     
   </header>
 </DocumentFragment>
 `;
