@@ -2,28 +2,27 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Contact from '..';
-import ContactForm from '..';
 
 afterEach(cleanup);
 
 
 describe('ContactForm component', () => {
     it('renders', () => {
-        render(<ContactForm />);
+        render(<Contact />);
     });
 
     it('matches snapshot DOM node structure', () => {
-        const { asFragment } = render(<ContactForm />);
+        const { asFragment } = render(<Contact />);
         expect(asFragment()).toMatchSnapshot();
     });
 });
 
-describe('h1 textContent is visible', () => {
-    it('populates header with text', () => {
-        const { getByTestId } = render(<ContactForm />);
+it('renders', () => {
+  const { getByTestId } = render(<Contact />)
+  expect(getByTestId('header')).toHaveTextContent('Contact me')
+})
 
-        expect(getByTestId('header')).toHaveTextContent('Contact me');
-    });
-
-    
-});
+it('renders', () => {
+  const { getByTestId } = render(<Contact />)
+  expect(getByTestId('button')).toHaveTextContent('Submit')
+})
