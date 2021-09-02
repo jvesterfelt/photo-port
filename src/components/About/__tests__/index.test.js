@@ -8,11 +8,11 @@ afterEach(cleanup);
 describe('About component', () => {
     // renders About test
     it('renders', () => {
-        render( < About / > );
+        render( < About /> );
     });
 
     it('matches snapshot DOM node structure', () => {
-        const { asFragment } = render( < About / > );
+        const { asFragment } = render( < About /> );
 
         expect(asFragment()).toMatchSnapshot();
     });
